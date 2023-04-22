@@ -1,3 +1,5 @@
-print("Hello World!")
-print ("jenkins test")
-print("My name is Asif")
+import requests
+url="http://localhost:5000/"
+response=requests.get(url)
+output=response.text
+assert output == 'Hello world!'
